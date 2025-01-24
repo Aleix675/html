@@ -1,0 +1,56 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura [
+  <!ELEMENT factura (emisor, cliente, detalle)>
+  <!ATTLIST factura numero ID #REQUIRED>
+  <!ATTLIST factura fecha CDATA #REQUIRED>
+  
+  <!ELEMENT emisor (nombre, cif, telefono)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT cif (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  
+  <!ELEMENT cliente (nombre, cif, telefono)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT cif (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  
+  <!ELEMENT detalle (linea+, importe)>
+  <!ELEMENT linea (descripcion, cantidad, oferta?, pvp)>
+  <!ATTLIST linea codigo ID #REQUIRED>
+  <!ATTLIST linea tipo (Libro | DVD | Varios) #IMPLIED>
+  <!ATTLIST linea importe CDATA #REQUIRED>
+  
+  <!ELEMENT descripcion (#PCDATA)>
+  <!ELEMENT cantidad (#PCDATA)>
+  <!ELEMENT oferta EMPTY>
+  <!ELEMENT pvp (#PCDATA)>
+  
+  <!ELEMENT importe (#PCDATA)>
+]>
+<factura numero="27" fecha="18/12/2013">
+  <emisor>
+    <nombre>Librería Pérez</nombre>
+    <cif>44555666B</cif>
+    <telefono>777888999</telefono>
+  </emisor>
+  <cliente>
+    <nombre>Biblioteca Txantrea</nombre>
+    <cif>33111222A</cif>
+    <telefono>333999444</telefono>
+  </cliente>
+  <detalle>
+    <linea codigo="AW7" tipo="Libro" importe="25">
+      <descripcion>Analítica Web 2.0</descripcion>
+      <cantidad>1</cantidad>
+      <oferta/>
+      <pvp>25€</pvp>
+    </linea>
+    <linea codigo="CP5" tipo="DVD" importe="60">
+      <descripcion>Curso de HTML</descripcion>
+      <cantidad>2</cantidad>
+      <pvp>30€</pvp>
+    </linea>
+    <importe>85€</importe>
+  </detalle>
+</factura>

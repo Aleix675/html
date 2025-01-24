@@ -1,0 +1,166 @@
+@keyframes blinkText {
+    0%, 100% {
+        opacity: 1; /* El texto es completamente visible */
+    }
+    50% {
+        opacity: 0; /* El texto desaparece momentáneamente */
+    }
+}
+
+.blink {
+    color:chartreuse;
+    animation: blinkText 1s infinite; /* Aplica el efecto y lo repite infinitamente */
+}
+
+a {
+    color: rgb(21, 101, 181); /* Color azul */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+a:hover {
+    color: rgb(37, 169, 240); /* Cambia el color al pasar el ratón */
+}
+
+/* Identificador del título principal */
+#tit {
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Menú principal */
+#menu-principal {
+    background-color: rgb(130, 126, 126);
+    color: rgb(57, 14, 14);
+    border: 2px solid rgb(37, 169, 240);
+    margin: 10px auto;
+    padding: 10px;
+    display: flex; /* Uso de flexbox para alinear mejor los elementos */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    align-items: center;
+    width: 50%; /* Ajusta el tamaño */
+    height: auto; /* Ajusta automáticamente la altura */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#menu-principal ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para una lista horizontal */
+    gap: 15px; /* Espacio entre los elementos */
+}
+#logo{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+#menu-principal li a {
+    color: rgb(57, 14, 14);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#menu-principal li a:hover {
+    color: rgb(37, 169, 240);
+    text-decoration: underline;
+}
+
+/* Estilo para los artículos */
+article.casalloguer {
+    display: inline-block;
+    background-color: rgb(130, 126, 126);
+    color: rgb(65, 62, 62);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 15px;
+    justify-items: center;
+    text-align: center;
+    max-width: 300px; /* Tamaño máximo del contenedor */
+    
+}
+
+article.casalloguer img {
+    width: 250px; /* Anchura fija */
+    height: auto; /* Mantén las proporciones */
+    max-height: 250px; /* Limita la altura máxima */
+    display: block; /* Evita que se desplacen junto al texto */
+    margin: 0 auto; /* Centra las imágenes en su contenedor */
+}
+
+
+/* Redes sociales en el aside */
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    margin-bottom: 15px;
+}
+
+aside nav ul li a img {
+    width: 50px; /* Tamaño uniforme de los iconos */
+    height: 50px;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 14px;
+    border-top: 3px solid rgb(37, 169, 240);
+}
+.feedback-form {
+    margin: 20px auto; /* Centra el formulario en la página */
+    text-align: center; /* Centra el texto dentro del formulario */
+    height: 40%;
+    width: 90%; /* Ancho máximo del formulario */
+    padding: 15px;
+    background-color: rgb(240, 240, 240); /* Fondo suave */
+    border: 1px solid rgb(200, 200, 200); /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.feedback-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+}
+
+.feedback-form textarea {
+    width: 100%; /* Ancho completo dentro del formulario */
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid rgb(180, 180, 180);
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.feedback-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(21, 101, 181); /* Color del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: rgb(15, 85, 160); /* Cambio de color al pasar el ratón */
+}
+

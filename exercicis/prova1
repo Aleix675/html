@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>titol prinicipal</h1>
+    <h2>subtitol</h2>
+<a href="http://inscastellet.cat/" target="_blank">Link a inscastellet</a>
+</body>
+</html>

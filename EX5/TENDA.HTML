@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TENDA</title>
+    <link rel="stylesheet" href="aspecte.css">
+    <style>
+        body {
+            background-color: rgb(130, 126, 126);
+            font-family: Arial, sans-serif;
+        }
+        
+    h1 {
+        color:blueviolet;
+        display: center;
+        text-align: center;
+    }
+
+    
+
+        section{
+            display: center;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgb(50, 50, 50);
+            color: white;
+        }
+
+        aside nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside nav ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+<section>
+    <h1 class="blink">MOTOCARD</h1>
+    <div class="logo">
+    <a href="https://www.motocard.com/" target="_blank" >
+        <img src="Banner.jpg" alt="Motocard"></a>
+    </div>
+    <h2 id="tit">
+        <a href="https://www.motocard.com/equipacion-moto-carretera/cascos?p=1">Catàlec</a></h2>
+    
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="#">Inici</a></li>
+            <li><a href="#">Productes</a></li>
+            <li><a href="#">Serveis</a></li>
+            <li><a href="#">Contacte</a></li>
+        </ul>
+    </nav>
+</header>
+<section>
+
+    <article class="casalloguer">
+        <h3>HJC RPHA11</h3>
+        <a href="https://www.motocard.com/cascos/hjc-rpha_1_joker_dc_comics_mc48sf_18224805.aspx" target="_blank">
+            <img src="hrpha11.jpg" alt="HJC RPHA11"></a>
+            <br>
+            <p><b>222€</b></p>
+            <p>Casco del aleix</p>
+    </article>
+
+    <article class="casalloguer">
+        <h3>AGV K1</h3>
+        <a href="https://www.motocard.com/cascos/agv-k1_s_rossi_mugello_1999_18394001_041.aspx" target="_blank">
+            <img src="AGV.jpg" alt="AGV K1"></a>
+            <br>
+            <p><b>222€</b></p>
+            <p>Casco del aleix</p>
+    </article>
+
+    <article class="casalloguer">
+        <h3>AGV K6</h3>
+        <a href="https://www.motocard.com/cascos/agv-k6_s_sic58_004.aspx" target="_blank">
+            <img src="AGVK6.jpg" alt="AGV K6"></a>
+            <br>
+            <p><b>222€</b></p>
+            <p>Casco del aleix</p>
+    </article>
+    <article class="casalloguer">
+        <h3>AGV PISTA GP RR</h3>
+        <a href="https://www.motocard.com/cascos/agv-pista_gp_rr_e2206_rossi_soleluna_2021_010.aspx" target="_blank">
+            <img src="pista" alt="AGV GP RR"></a>
+            <br>
+            <p><b>222€</b></p>
+            <p>Casco del aleix</p>
+    </article>
+
+    <article class="casalloguer">
+        <h3>ARAI RX7</h3>
+        <a href="https://www.motocard.com/cascos/arai-rx_7v_evo_diamond_black.aspx" target="_blank">
+            <img src="rx7.jpg" alt="banner"></a>
+            <br>
+            <p><b>222€</b></p>
+            <p>Casco del aleix</p>
+    </article>
+</section>
+
+<aside>
+    
+    <form action="#" method="post" class="feedback-form">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required><br><br>
+    
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido..." required><br><br>
+        
+        <label for="telefono">Telefono</label><br>
+        <input type="text" id="telefono" name="Telefono" placeholder="Escribe tu telefono..." required><br><br>
+
+        <label for="feedback">Escribe una reseña</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="40" placeholder="Escribe aquí tu comentario..." required></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</aside>
+
+<footer>
+    <nav>
+        <h3>Xarxes socials</h3>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank">
+                <img src="instgrm.png" alt="Instagram">
+            </a></li>
+            <li><a href="https://www.x.com" target="_blank">
+                <img src="twitter.png" alt="Twitter">
+            </a></li>
+            <li><a href="https://www.tiktok.com" target="_blank">
+                <img src="tiktoks.png" alt="TikTok">
+            </a></li>
+        </ul>
+    </nav>
+    
+    &copy; 2025 MOTOCARD
+</footer>
+
+</body>
+</html>
