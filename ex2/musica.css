@@ -1,0 +1,36 @@
+    .logo {
+         flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        color: gold;
+        justify-content: center;
+        align-items: center;
+    }
+.logo img {
+    height: auto;
+    width: 100%;
+    display: block; /* Evita márgenes extra en la imagen */
+}
+
+/* Estilos para cada autor */
+.autors {
+    display:inline-flexbox;
+    color: rgb(65, 62, 62);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    justify-items: center;
+    text-align: start;
+}
+
+/* Estilo para las imágenes dentro de los artículos */
+.autors img {
+    width: 90px; /* Anchura fija */
+    height: auto; /* Mantén las proporciones */
+    max-height: 90px; /* Limita la altura máxima */
+    display: flex; /* Evita que se desplacen junto al texto */
+    margin: 0 auto; /* Centra las imágenes en su contenedor */
+}
+
+
+
