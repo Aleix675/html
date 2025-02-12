@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    /* Encabezado principal de la página */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Contenedor central*/
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.portada{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3 ease-in-out;
+}
+.portada:hover{
+    transform: scale(1.1);
+}
+.firstImg{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+.firstImg:hover{
+    transform: scale(1.1);
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    /* Imágenes con esquinas redondeadas y transición de zoom */
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    /* Efecto de zoom al pasar el mouse sobre la imagen */
+}
