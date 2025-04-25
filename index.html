@@ -1,30 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="WEB360/imtgs/index_logo.jpg">
-    <title>Aleix</title>
-    <style>
-        body{
-            background-color: yellow;
-            text-align: center;
-        }
-        li {
-            text-align: center;
-            transition: 0.3s;
-        }
-        li:hover{
-            scale: 1.1;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta autor="Aleix Rodriguez" />
+  <meta name="description" content="Portafolis Aleix Rodriguez" />
+  <meta name="keywords" content="HTML, CSS, Bootstrap, JavaScript, DAM, web, software" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+  <title>Portafolis Aleix Rodriguez</title>
+
+  <link rel="stylesheet" href="pt5/p5.css">
+
+  <!--favicon-->
+  <link rel="icon" href="WEB360/imtgs/index_logo.jpg">
+
+  <title>Portafolis Aleix Rodriguez</title>
+  <!--Bootstrap CSS i icones-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    <h1>Aleix Rodriguez Collado</h1>
-    <li><a href="EX5/TENDA.HTML">Exercici TENDA</a></li>
-    <li><a href="EX2/musica.html">Exercici MUSICA</a></li>
-    <li><a href="Pintors/pintors.html">Exercici PINTOR</a></li>
-    <li><a href="WEB360/web.html">PT4: Imatges i vídeos 360º</a></li>
-    <li><a href="wakamole/wackamole.html">Joc Whack-A-Mole</a></li>
+
+<body class="hero align-items-center">
+  <nav class="navbar navbar-expand-md navbar-light ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!--<a class="navbar-brand" href="#">Hidden brand</a>-->
+        <a class="navbar-brand" href="#">
+          <img src="WEB360/imtgs/index_logo.jpg" alt="icona" width="50" />
+        </a>
+
+        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Web design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+
+        </ul>
+        <!--<form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>-->
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- carrega el javascript de Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <section class="hero align-items-center">
+    <div>
+      <img class="hero-imatge-developer" src="pt5/imtgs/triumphyo.png" alt="foto personal" />
+      <h1>Hi, I'm Aleix Rodriguez Collado </h1>
+      <h2>Software Developer and Estudent of DAM</h2>
+    </div>
+    <div class="hero-inferior">
+      <img class="img-fluid" src="pt5/imtgs/man-programmer-is-working-on-his-laptop-coding-and-programming-vector.jpg"
+        alt="imatge ordinador i llenguatges" />
+    </div>
+    <!--section sobre mi-->
+
+    <div class="dark-section">
+      <div class="section-title">
+        <h2>Learn more about me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta vitae animi. Reiciendis, officia? Cum,
+          voluptatem, aliquid eius expedita ad sunt architecto numquam aperiam maxime, veniam perferendis nihil nobis
+          inventore?</p>
+      </div>
+    </div>
+
+    <!--botó descarregar cv-->
+    <div class="text-center">
+      <a href="document.pdf" download class="btn btn-primary btn-lg btn-responive">
+        📄 Download CV
+      </a>
+    </div>
+
+  </section>
+
+  <section class="experiencia light-section">
+
+    <div class="container text-center">
+      <!--tenim una fila -->
+      <div class="row">
+        <!--a dins de la fila hi haurà 3 columnes, una per cada experiencia o coneixement-->
+        <div class="Columna col-12 col-md-4">
+          <i class="bi bi-filetype-html"></i>
+          <p class="experiencia-title">Web development</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! Debitis est eaque quae
+            voluptatibus. Doloribus, id dolorum quis sunt odit porro pariatur, reprehenderit sapiente eum saepe magni.
+          </p>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill bg-primary">Html</span>
+            <span class="badge rounded-pill bg-primary">CSS</span>
+            <span class="badge rounded-pill bg-primary">JavaScript</span>
+            <span class="badge rounded-pill bg-primary">Bootstrap</span>
+            <span class="badge rounded-pill bg-primary">VUE</span>
+          </div>
+        </div>
+
+
+        <div class="Columna col-12 col-md-4">
+          <i class="bi bi-filetype-java"></i>
+          <p class="experiencia-title">Java</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! Debitis est eaque quae
+            voluptatibus. Doloribus, id dolorum quis sunt odit porro pariatur, reprehenderit sapiente eum saepe magni.
+          </p>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill bg-primary">Eclipse</span>
+            <span class="badge rounded-pill bg-primary">Javadoc</span>
+            <span class="badge rounded-pill bg-primary">JDK</span>
+          </div>
+        </div>
+
+        <div class="Columna col-12 col-md-4">
+          <i class="bi bi-cpu"></i>
+          <p class="experiencia-title">O.S.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! Debitis est eaque quae
+            voluptatibus. Doloribus, id dolorum quis sunt odit porro pariatur, reprehenderit sapiente eum saepe magni.
+          </p>
+          <div class="badges-contenedor">
+            <span class="badge rounded-pill bg-primary">Window</span>
+            <span class="badge rounded-pill bg-primary">Linux</span>
+            <span class="badge rounded-pill bg-primary">Servers</span>
+            <span class="badge rounded-pill bg-primary">Bash</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--section web dessign-->
+  <section>
+    <div class="dark-section">
+      <h2 class="section-title black-text">Web Design</h2>
+      <h3 class="section-description">Some web projects developed in the DAM cycle </h3>
+    </div>
+  </section>
+
+  <!--galeria de projectes-->
+  <section class="projectes white-section d-flex flex-column">
+    <div class="container text-center projectes-container">
+      <div class="row">
+        <!--projecte 1-->
+        <div class="projecte col-12 col-md-6 col-lg-4">
+          <img src="pt5/imtgs/Captura de pantalla 2025-03-13 153439.png" alt="projecte 1" />
+          <div class="overlay">
+            <p>Botiga de cascos</p>
+            <div class="icones-contenidor">
+              <a href="https://aleixrodriguez.netlify.app/ex5/tenda" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-laptop"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--projecte 2-->
+        <div class="projecte col-12 col-md-6 col-lg-4">
+          <img src="pt5/imtgs/musica.png" alt="projecte 2" />
+          <div class="overlay">
+            <p>pagina de musica</p>
+            <div class="icones-contenidor">
+              <a href="https://aleixrodriguez.netlify.app/ex2/musica" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-laptop"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--projecte 3-->
+        <div class="projecte col-12 col-md-6 col-lg-4">
+          <img src="pt5/imtgs/cuadres.png" alt="projecte 2" />
+          <div class="overlay">
+            <p>pagina de cuadres</p>
+            <div class="icones-contenidor">
+              <a href="https://aleixrodriguez.netlify.app/pintors/pintors" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-laptop"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--projecte 4-->
+        <div class="projecte col-12 col-md-6 col-lg-4">
+          <img src="pt5/imtgs/iglesia.png" alt="projecte 2" />
+          <div class="overlay">
+            <p>pagina media 360</p>
+            <div class="icones-contenidor">
+              <a href="https://aleixrodriguez.netlify.app/web360/web" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-laptop"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!--projecte 5-->
+    <div class="projecte col-12 col-md-6 col-lg-4">
+      <img src="pt5/imtgs/joc.png" alt="projecte 2" />
+      <div class="overlay">
+        <p>JOC</p>
+        <div class="icones-contenidor">
+          <a href="https://aleixrodriguez.netlify.app/wakamole/wackamole" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-laptop"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--section projectes-->
+  <section id="projectes-video" class="projectes white-section d-flex flex-column">
+    <h2 class="section-title black-text">Aplication Development</h2>
+    <h3 class="section-description">Some aplications developed in the DAM cycle </h3>
+    <!--galeria de projectes-->
+    <div class="container text-center projectes-container">
+      <div class="row">
+
+
+        <!--video del projecte 1-->
+        <div class="projecte col-12 col-md-6 col-lg-4">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/9_9e7hlwisI?si=tUVx3SQMB7YNS5v8" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h2>El meu projecte 1</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic animi deleniti quae! </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!--section contacte-->
+  <footer class="dark-section d-flex flex-column align-items-center justify-content-center">
+    <img class="footer-logo" src="pt5/imtgs/triumphyo.png" alt="logo" />
+    <p class="footer-text text-center">Contact me</p>
+    <div class="social-icons d-flex flex-wrap align-items-center justify-content-center">
+      <a href="mailto:homer@hotmail.com" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/homer-simpson" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://www.github.com/homer-simpson" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://www.twitter.com/homer-simpson" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-twitter"></i>
+      </a>
+    </div>
+    <div class="drets">Created by Aleix Rodriguez (2025) &#169;</div>
+  </footer>
 </body>
+
 </html>

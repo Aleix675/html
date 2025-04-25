@@ -38,6 +38,7 @@ h1 {
 }
 
 #score {
+    color: blueviolet;
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
