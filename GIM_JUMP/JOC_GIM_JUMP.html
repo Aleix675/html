@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de Detecció amb ml5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.12.2/dist/ml5.min.js"></script>
+</head>
+<body>
+    <script>
+        let audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3');
+        let video, poseNet, poses = [];
+        let timer = 60;
+        let timerRunning = false;
+        let score = 0;
+
+        const circleX = 640, circleY = 50, circleRadius = 200;
+
+        let objects = []; // Objectes que cauen
+
+        function setup() {
+            createCanvas(1280, 720);
+            video = createCapture(VIDEO);
+            video.size(1280, 720);
+            video.hide();
+            poseNet = ml5.poseNet(video, () => console.log("PoseNet carregat!"));
+            poseNet.on('pose', gotPoses);
+        }
+
+        function gotPoses(results) {
+            poses = results;
+        }
+
+        function draw() {
+            image(video, 0, 0);
+
+            if (!timerRunning) {
+                fill(0, 255, 0);
+                noStroke();
+                ellipse(circleX, circleY, circleRadius * 2);
+            }
+
+            if (poses.length > 0 && !timerRunning) {
+                let pose = poses[0].pose;
+                let lw = pose.keypoints.find(kp => kp.part === 'leftWrist');
+                let rw = pose.keypoints.find(kp => kp.part === 'rightWrist');
+
+                if (lw && rw) {
+                    let ld = dist(lw.position.x, lw.position.y, circleX, circleY);
+                    let rd = dist(rw.position.x, rw.position.y, circleX, circleY);
+
+                    if (ld < circleRadius && rd < circleRadius) {
+                        startGame();
+                    }
+                }
+            }
+
+            if (poses.length > 0) {
+                let pose = poses[0].pose;
+
+                for (let i = 0; i < pose.keypoints.length; i++) {
+                    let kp = pose.keypoints[i];
+                    if (kp.score > 0.2 && (kp.part.includes("Wrist") || kp.part.includes("Ankle"))) {
+                        fill(255, 0, 0);
+                        ellipse(kp.position.x, kp.position.y, 12, 12);
+                    }
+                }
+
+                // Dibuixar objectes i comprovar col·lisions
+                if (timerRunning) {
+                    for (let i = objects.length - 1; i >= 0; i--) {
+                        let obj = objects[i];
+                        fill(obj.color);
+                        ellipse(obj.x, obj.y, obj.size);
+                        obj.y += obj.speed;
+
+                        // Comprovació col·lisió amb mans o peus
+                        for (let j = 0; j < pose.keypoints.length; j++) {
+                            let kp = pose.keypoints[j];
+                            if (kp.score > 0.2 && (kp.part.includes("Wrist") || kp.part.includes("Ankle"))) {
+                                if (dist(kp.position.x, kp.position.y, obj.x, obj.y) < obj.size / 2) {
+                                    objects.splice(i, 1);
+                                    score++;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    // Afegir objectes nous de manera aleatòria
+                    if (frameCount % 30 === 0) {
+                        objects.push({
+                            x: random(width),
+                            y: -20,
+                            size: random(30, 60),
+                            speed: random(2, 6),
+                            color: color(random(255), random(255), random(255))
+                        });
+                    }
+                }
+            }
+
+            if (timerRunning) {
+                fill(255);
+                textSize(32);
+                textAlign(LEFT, TOP);
+                text("Temps: " + timer + "s", 20, 20);
+                text("Puntuació: " + score, 20, 60);
+
+                if (frameCount % 60 === 0) timer--;
+                if (timer <= 0) {
+                    endGame();
+                }
+            } else {
+                fill(255);
+                textSize(36);
+                textAlign(CENTER);
+                text("Col·loca les dues mans dins del cercle verd per començar", width / 2, height - 100);
+            }
+        }
+
+        function startGame() {
+            timerRunning = true;
+            audio.load();
+            audio.play();
+            timer = 60;
+            score = 0;
+            objects = [];
+        }
+
+        function endGame() {
+            timerRunning = false;
+            audio.pause();
+            audio.currentTime = 0;
+            alert("Temps acabat! Has aconseguit " + score + " punts.");
+        }
+    </script>
+</body>
+</html>
