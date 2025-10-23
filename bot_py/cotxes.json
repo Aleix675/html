@@ -1,0 +1,23 @@
+[
+   {"marca": "Toyota", "model": "Supra MK4", "any": 1998, "preu": "25.000€", "foto": "https://hips.hearstapps.com/hmg-prod/images/the-fast-and-the-furious-toyota-supra-subasta-1624180933.jpg?crop=1.00xw:0.892xh;0,0.0372xh&resize=1200:*"},
+   {"marca": "Nissan", "model": "240SX S13", "any": 1993, "preu": "15.000€", "foto": "https://uploads.builtforbackroads.com/uploads/2025/01/2025.01.24-NISSAN-S13-240SX-LS-SWAP-1991_1.jpg"},
+   {"marca": "Nissan", "model": "350Z", "any": 2003, "preu": "18.000€", "foto": "https://d3d63d48.delivery.rocketcdn.me/wp-content/uploads/2024/11/nissan-350z-historia-1.jpg"},
+   {"marca": "Lexus", "model": "IS300", "any": 2001, "preu": "14.000€", "foto": "https://www.autoscout24.it/cms-content-assets/5su7zVIIZQOApDZEAItmtm-078ed4dc85bd29dbf7d7b95c3814372c-lexus-is-300-front-1100.jpg"},
+   {"marca": "Lexus", "model": "GS300", "any": 1999, "preu": "15.000€", "foto": "https://www.cochesyconcesionarios.com/media/cache/1170x780/uploads/lexus/gs/2/sa/wallpapers-lexus-gs-2000-8-1024x768-8b97e8b411736cc14b2a6d890b9aee8b08657296.jpeg"},
+   {"marca": "Mazda", "model": "RX-7 FD", "any": 1997, "preu": "23.000€", "foto": "https://shop.penskeshocks.com/cdn/shop/products/mazda_rx_7_fd_chassis_7500_da-1.jpg?v=1743454219"},
+   {"marca": "Honda", "model": "NSX (NA1)", "any": 1992, "preu": "40.000€", "foto": "https://www.super-hobby.es/zdjecia/7/7/3/3494_rd.jpg"},
+   {"marca": "Subaru", "model": "Impreza WRX", "any": 2000, "preu": "20.000€", "foto": "https://fredyscoolcars.com/wp-content/uploads/2023/11/69c28f6c91a149426d494b596107864b98966e0e.jpg"},
+   {"marca": "Mitsubishi", "model": "Lancer EVO VI", "any": 1999, "preu": "22.000€", "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu1hPDAwkHP1EE3FaefyvzATeqoRQ24GKD6w&s"},
+   {"marca": "Toyota", "model": "AE86", "any": 1986, "preu": "18.000€", "foto": "https://highxtar.com/wp-content/uploads/2024/01/highxtar-toyoya-.jpg"},
+   {"marca": "Nissan", "model": "Skyline R32", "any": 1991, "preu": "30.000€", "foto": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Nissan_Skyline_R32_GT-R_002.jpg"},
+   {"marca": "Nissan", "model": "Skyline R33", "any": 1995, "preu": "32.000€", "foto": "https://www.super-hobby.es/zdjecia/1/8/6/1067_rd.jpg"},
+   {"marca": "Nissan", "model": "Skyline R34", "any": 2002, "preu": "45.000€", "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Nissan_Skyline_R34_GT-R_N%C3%BCr_002.jpg/1200px-Nissan_Skyline_R34_GT-R_N%C3%BCr_002.jpg"},
+   {"marca": "Honda", "model": "S2000", "any": 2001, "preu": "21.000€", "foto": "https://upload.wikimedia.org/wikipedia/commons/d/dc/HondaS2000-004.jpg"},
+   {"marca": "Mazda", "model": "RX-8", "any": 2003, "preu": "14.000€", "foto": "https://www.km77.com/media/fotos/mazda_rx_8_2003_rx8_1288_2.jpg"},
+   {"marca": "Mitsubishi", "model": "Eclipse GSX", "any": 1998, "preu": "15.000€", "foto": "https://images.classic.com/vehicles/8142152a73aef3afc30864e990c512736db55e08.jpg?ar=16%3A9&fit=crop&h=338&w=600"},
+   {"marca": "Toyota", "model": "Celica GT-Four", "any": 1995, "preu": "16.000€", "foto": "https://ak-interactive.com/wp-content/uploads/2022/04/TAM24133-2.jpg"},
+   {"marca": "Subaru", "model": "Legacy GT", "any": 2000, "preu": "12.000€", "foto": "https://file.kelleybluebookimages.com/kbb/base/house/1998/1998-Subaru-Legacy-FrontSide_SULEGGTSED983_505x375.jpg"},
+   {"marca": "Honda", "model": "Prelude", "any": 1997, "preu": "9.000€", "foto": "https://zeperfs.com/photos/1895-f.jpg"},
+   {"marca": "Nissan", "model": "Silvia S15", "any": 2002, "preu": "23.000€", "foto": "https://webgest.agenceauto.com/upload/image/large/172132-20250121015327070218-678f98c71124d.jpg"}
+
+]

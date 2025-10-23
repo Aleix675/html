@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personatge de Rick i Morty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px;
+    }
+    #resultat img {
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    #carregant {
+      font-style: italic;
+      color: orange;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #008080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #006666;
+    }
+    #resultat {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Busca un personatge de Rick i Morty</h1>
+  <input type="text" id="nom" placeholder="Escriu el nom del personatge">
+  <button onclick="cercar()">Cercar</button>
+
+  <p id="carregant" style="display: none;">Carregant...</p>
+  <div id="resultat"></div>
+
+  <script>
+    function cercar() {
+      let nom = document.getElementById("nom").value;
+      let carregant = document.getElementById("carregant");
+      let resultat = document.getElementById("resultat");
+
+      // Mostrem "Carregant..."
+      carregant.style.display = "block";
+      resultat.innerHTML = "";
+
+      fetch("https://rickandmortyapi.com/api/character/?name=" + nom)
+        .then(res => res.json()) // Fase 1: resposta
+        .then(data => {          // Fase 2: dades JSON
+          carregant.style.display = "none";
+
+          if (data.results && data.results.length > 0) {
+            let p = data.results[0];
+            resultat.innerHTML =
+              "<h2>" + p.name + "</h2>" +
+              "<img src='" + p.image + "' alt='Imatge'>" +
+              "<p>Espècie: " + p.species + "</p>" +
+              "<p>Gènere: " + p.gender + "</p>" +
+              "<p>Origen: " + p.origin.name + "</p>";
+          } else {
+            resultat.innerHTML = "<p class='error'>Cap personatge trobat.</p>";
+          }
+        })
+        .catch(error => {
+          carregant.style.display = "none";
+          resultat.innerHTML = "<p class='error'>Error en la cerca.</p>";
+        });
+    }
+  </script>
+
+</body>
+</html>

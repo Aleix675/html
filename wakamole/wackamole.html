@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Whac-A-Mole</title>
+    <link rel="stylesheet" href="wackamole.css">
+</head>
+<body>
+    <h1>   
+        <div id="game-board"></div>
+        <div id="score">Puntuació: 0</div>
+    </h1>
+    <script>
+        const board = document.getElementById('game-board');
+    const scoreText = document.getElementById('score');
+    let score = 0;
+    let activeIndex = -1;
+
+    const audio = new Audio('archivos/boing.mp3');
+
+    // Crear 9 forats
+    for (let i = 0; i < 9; i++) {
+        const hole = document.createElement('div');
+        hole.classList.add('hole');
+
+        const img = document.createElement('img');
+        img.src = 'archivos/topoNo.jpg';
+        img.classList.add('mole-img');
+
+        img.addEventListener('click', () => {
+            if (activeIndex === i) {
+                img.src = 'archivos/topoPam.jpg';
+                score += 10;
+                scoreText.textContent = 'Puntuació: ' + score;
+                audio.currentTime = 0;
+                audio.play();
+                activeIndex = -1;
+            } else {
+                img.src = 'archivos/topoPam.jpg';
+            }
+            setTimeout(() => img.src = 'archivos/topoNo.jpg', 300);
+        });
+
+        hole.appendChild(img);
+        board.appendChild(hole);
+    }
+
+    const moleImages = document.querySelectorAll('.mole-img');
+
+    function showRandomMole() {
+        if (activeIndex !== -1) {
+            moleImages[activeIndex].src = 'archivos/topoNo.jpg';
+        }
+
+        const index = Math.floor(Math.random() * moleImages.length);
+        moleImages[index].src = 'archivos/topoSi.jpg';
+        activeIndex = index;
+    }
+
+    setInterval(showRandomMole, 1000);
+    </script>
+</body>
+</html>
+
